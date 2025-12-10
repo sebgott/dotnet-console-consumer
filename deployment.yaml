@@ -23,14 +23,14 @@ spec:
               value: "onprem.utv.doc-examples.data.add.v1"
             - name: CONSUMER_GROUP
               value: "team-2s-canary"
-
-            # OAuth settings — same as producer
             - name: SASL_CLIENT_ID
               value: "team-2s"
             - name: SASL_CLIENT_SECRET
               value: "1234"
             - name: SASL_TOKEN_ENDPOINT_URL
               value: "http://keycloak.keycloak.svc.cluster.local:8080/realms/master/protocol/openid-connect/token"
+            - name: SASL_AUDIENCE
+              value: "kafka"
 
           resources:
             limits:
